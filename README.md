@@ -40,3 +40,17 @@ As a consequence, various dense layers will learn duplicated gradient informatio
 When these concepts were combined with the Darknet-53 design in YOLOv3, the residual blocks were replaced with dense blocks.
 CSP preserves features via propagation, stimulates the network to reuse features, decreases the number of network parameters, and aids in the preservation of fine-grained features for more efficient forwarding to deeper layers.
 Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block. 
+### Neck – Additional block – SPP block
+
+The output feature maps of the CSPDarknet53 backbone were delivered to an extra block (Spatial Pyramid Pooling block) to extend the receptive field and separate out the most relevant features before sending to feature aggregation architecture in the neck.
+
+Many CNN-based (convolutional neural network) models have fully connected layers that take only images of certain dimensions as input.
+SPP was created with the goal of producing a fixed-size output regardless of the size of the input.
+SPP also aids in the extraction of essential characteristics by pooling multi-scale versions of itself.
+Since fully connected layers were removed from YOLOv2, the YOLO algorithm has evolved into an FCN-based (fully convolution network) model that accepts images of varying dimensions as input. .
+Furthermore, YOLO must forecast and localize the locations of the bounding boxes based on the 𝑆 × S grid cell displayed on the image.
+As a result, turning two-dimensional feature maps into a fixed-size one-dimensional vector isn't always a good idea.
+As a result, the SPP block has been updated to maintain the output spatial dimension.
+The new SPP block was situated near the backbone.
+A 1X1 convolution is employed between the backbone and the SPP block to reduce the amount of input feature maps delivered to the SPP block .
+Following that, the input feature maps are duplicated and pooled in multiple scales using the same approach as the traditional SPP block, except that padding is employed to preserve the output feature maps a consistent size, such that three feature maps remain the sizes of 𝑠𝑖𝑧𝑒𝑓𝑚𝑎𝑝 × 𝑠𝑖𝑧𝑒𝑓𝑚𝑎𝑝 × 512.. 
