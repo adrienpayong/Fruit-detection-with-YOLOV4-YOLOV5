@@ -18,3 +18,6 @@ The CSP (Cross Stage Partial) is built on the same premise as the DenseNet descr
 A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed.
 As a consequence, various dense layers will learn duplicated gradient information again.
 2019 (Wang et al.) 
+When these concepts were combined with the Darknet-53 design in YOLOv3, the residual blocks were replaced with dense blocks.
+CSP preserves features via propagation, stimulates the network to reuse features, decreases the number of network parameters, and aids in the preservation of fine-grained features for more efficient forwarding to deeper layers.
+Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block. 
