@@ -1,4 +1,4 @@
-#Object detection architecture
+# Object detection architecture
 Along with the development of YOLO, several object identification algorithms using various methodologies have achieved outstanding results.
 Since then, two architectural object detection ideas have emerged: one-stage detector and two-stage detector.
 
