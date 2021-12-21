@@ -1,3 +1,13 @@
+#Object detection architecture
+Along with the development of YOLO, several object identification algorithms using various methodologies have achieved outstanding results.
+Since then, two architectural object detection ideas have emerged: one-stage detector and two-stage detector.
+
+The input image characteristics are compressed down by the feature extractor (Backbone) and then sent to the object detector (containing the Detection Neck and Detection Head), as shown in Figure 15.
+Detection Neck (or Neck) functions as a feature aggregation, mixing and combining the features created in the Backbone to prepare for the detection process in the Detection Head (or Head).
+
+The distinction here is that Head is in charge of detection, including localization and classification, for each bounding box.
+As shown in Figure 15, the two-stage detector does these two jobs independently and then aggregates their findings (Sparse Detection), while the one-stage detector performs both tasks simultaneously (Dense Detection) (Solawetz, 2020).
+Because YOLO is a one-stage detector, You Only Look Once. 
 # Overview on Backbone CSPDarknet53 
 
 The authors investigated three alternatives for the YOLOv4 model's backbone (feature extractor): CSPResNext53, CSPDarknet53, and EfficientNet-B3, the most sophisticated convolutional network at the time.
