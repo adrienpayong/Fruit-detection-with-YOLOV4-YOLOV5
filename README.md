@@ -1,4 +1,4 @@
-# Backbone-CSPDarknet53-architecture
+# Overview on Backbone CSPDarknet53 
 
 The authors investigated three alternatives for the YOLOv4 model's backbone (feature extractor): CSPResNext53, CSPDarknet53, and EfficientNet-B3, the most sophisticated convolutional network at the time.
 CSP Darknet53 neural network was judged to be the best optimum model based on theoretical rationale and several testing.
