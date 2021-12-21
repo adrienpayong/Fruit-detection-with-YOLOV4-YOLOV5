@@ -14,6 +14,7 @@ Detection Neck (or Neck) functions as a feature aggregation, mixing and combinin
 
 The distinction here is that Head is in charge of detection, including localization and classification, for each bounding box.
 As shown below,![source](https://github.com/adrienpayong/object-detection/blob/main/Capture1.PNG).
+
 the two-stage detector does these two jobs independently and then aggregates their findings (Sparse Detection), while the one-stage detector performs both tasks simultaneously (Dense Detection) (Solawetz, 2020).
 Because YOLO is a one-stage detector, You Only Look Once. 
 # Overview on Backbone CSPDarknet53 
