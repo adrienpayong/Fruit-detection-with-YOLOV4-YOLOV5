@@ -66,4 +66,5 @@ Path Aggregation Network (PAN) is a more advanced version of FPN.
 
 Because the flow in FPN architecture is top-down, only the large-scale detector from low-level layers in FPN may receive semantic information from high-level layers and fine-grained features from low-level layers in the lateral backbone at the same time .
 Currently, the small-scale detector from high-level layers in FPN detects objects using solely semantic information.
-The notion of concatenating semantic features with fine-grained features at high-level layers was suggested to increase the performance of the small and medium-scale detectors. 
+The notion of concatenating semantic features with fine-grained features at high-level layers was suggested to increase the performance of the small and medium-scale detectors.
+![source](https://github.com/adrienpayong/object-detection/blob/main/path.PNG)
