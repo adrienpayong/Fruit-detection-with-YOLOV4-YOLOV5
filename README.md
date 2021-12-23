@@ -56,3 +56,13 @@ The new SPP block was situated near the backbone.
 
 A 1X1 convolution is employed between the backbone and the SPP block to reduce the amount of input feature maps delivered to the SPP block .
 Following that, the input feature maps are duplicated and pooled in multiple scales using the same approach as the traditional SPP block, except that padding is employed to preserve the output feature maps a consistent size, such that three feature maps remain the sizes of 𝑠𝑖𝑧𝑒𝑓𝑚𝑎𝑝 × 𝑠𝑖𝑧𝑒𝑓𝑚𝑎𝑝 × 512.. 
+### Neck – Feature Aggregation – PANet
+After passing through the backbone, the input image's features are converted into semantical features (or learned features).
+In other words, as the input image progresses through the low-level layers, the intricacy of semantical characteristics increases but the spatial resolution of feature maps diminishes owing to downsampling.
+As a result, spatial information and fine-grained characteristics are lost.
+For YOLOv3's neck, Joseph Redmon used the Feature Pyramid Network (FPN) architecture to maintain these fine-grained characteristics.
+The FPN design used a top-down approach to transmit semantical information (from the high-level layer) and then concatenate them to fine-grained features (from the backbone's low-level layer) for predicting tiny objects in the large-scale detector.
+Path Aggregation Network (PAN) is a more advanced version of FPN.
+Because the flow in FPN architecture is top-down, only the large-scale detector from low-level layers in FPN may receive semantic information from high-level layers and fine-grained features from low-level layers in the lateral backbone at the same time .
+Currently, the small-scale detector from high-level layers in FPN detects objects using solely semantic information.
+The notion of concatenating semantic features with fine-grained features at high-level layers was suggested to increase the performance of the small and medium-scale detectors. 
