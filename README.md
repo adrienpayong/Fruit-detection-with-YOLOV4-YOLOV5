@@ -69,3 +69,9 @@ Currently, the small-scale detector from high-level layers in FPN detects object
 The notion of concatenating semantic features with fine-grained features at high-level layers was suggested to increase the performance of the small and medium-scale detectors.
 
 ![source](https://github.com/adrienpayong/object-detection/blob/main/path.PNG)
+
+However, the backbone of today's deep neural networks comprises a large number of layers (can be more than 100 layers).
+As a result, in FPN, fine-grained features must traverse a lengthy trip from low-level to high-level layers.
+The PAN architecture's developers offered a bottom-up augmentation approach in addition to the top-down one utilized in FPN.
+As a result, a "shortcut" was built to link fine-grained characteristics from lower-level layers to higher-level layers.
+This "shortcut" has less than ten layers, allowing for easier information flow (Liu et al., 2018). 
