@@ -75,3 +75,7 @@ As a result, in FPN, fine-grained features must traverse a lengthy trip from low
 The PAN architecture's developers offered a bottom-up augmentation approach in addition to the top-down one utilized in FPN.
 As a result, a "shortcut" was built to link fine-grained characteristics from lower-level layers to higher-level layers.
 This "shortcut" has less than ten layers, allowing for easier information flow (Liu et al., 2018). 
+## Head – YOLOv3
+The job of the head in a one-stage detector is to make dense predictions.
+The dense prediction is the final prediction, which is made up of a vector that contains the predicted bounding box coordinates (center, height, breadth), the prediction confidence score, and the probability classes.
+For detection, YOLOv4 uses the same head as YOLOv3 with anchor-based detection stages and three degrees of detection granularity (Solawetz, 2020) 
