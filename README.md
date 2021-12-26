@@ -82,7 +82,9 @@ Although fairly precise, this might nevertheless result in undesirable outcomes 
 
 To circumvent this, PANet employs features from all tiers and allows the network to choose which are valuable.
 To extract the features for the object, it runs the ROI Align operation on each feature map.
-Following this, an element-wise max fusion operation is performed to allow the network to adapt to new features. 
+Following this, an element-wise max fusion operation is performed to allow the network to adapt to new features.
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/Capture7.PNG)
 
 ### Head – YOLOv3
 The job of the head in a one-stage detector is to make dense predictions.
