@@ -17,7 +17,7 @@ As shown below,![source](https://github.com/adrienpayong/object-detection/blob/m
 
 the two-stage detector does these two jobs independently and then aggregates their findings (Sparse Detection), while the one-stage detector performs both tasks simultaneously (Dense Detection) (Solawetz, 2020).
 Because YOLO is a one-stage detector, You Only Look Once. 
-# Overview on Backbone CSPDarknet53 
+# Backbone CSPDarknet53 
 
 The authors investigated three alternatives for the YOLOv4 model's backbone (feature extractor): CSPResNext53, CSPDarknet53, and EfficientNet-B3, the most sophisticated convolutional network at the time.
 CSP Darknet53 neural network was judged to be the best optimum model based on theoretical rationale and several testing.
@@ -75,6 +75,15 @@ As a result, in FPN, fine-grained features must traverse a lengthy trip from low
 The PAN architecture's developers offered a bottom-up augmentation approach in addition to the top-down one utilized in FPN.
 As a result, a "shortcut" was built to link fine-grained characteristics from lower-level layers to higher-level layers.
 This "shortcut" has less than ten layers, allowing for easier information flow (Liu et al., 2018). 
+## Adaptive Feature Pooling Structure 
+Previously utilized algorithms, such as the Mask-RCNN, employed information from a single stage to forecast masks.
+If the area of interest was wide, it employed ROI Align Pooling to pull features from higher levels.
+Although fairly precise, this might nevertheless result in undesirable outcomes since two proposals with as little as 10-pixel differences can be allocated to two separate layers, despite the fact that they are relatively identical proposals.
+
+To circumvent this, PANet employs features from all tiers and allows the network to choose which are valuable.
+To extract the features for the object, it runs the ROI Align operation on each feature map.
+Following this, an element-wise max fusion operation is performed to allow the network to adapt to new features. 
+
 ### Head – YOLOv3
 The job of the head in a one-stage detector is to make dense predictions.
 The dense prediction is the final prediction, which is made up of a vector that contains the predicted bounding box coordinates (center, height, breadth), the prediction confidence score, and the probability classes.
