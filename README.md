@@ -1,4 +1,4 @@
-# YOLOv4
+# Overview of YOLOv4
 The original YOLO algorithm was created by Joseph Redmon, who is also the creator of the Darknet custom framework.
 After 5 years of study and development to the third generation of YOLO (YOLOv3), Joseph Redmon announced his retirement from the area of computer vision and the discontinuation of developing the YOLO algorithm due to concerns that his research will be misused in military applications.
 He does not, however, challenge the continuance of study by any person or group based on the YOLO algorithm's early principles.
