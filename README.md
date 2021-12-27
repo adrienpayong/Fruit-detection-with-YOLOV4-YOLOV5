@@ -128,7 +128,7 @@ By deconstructing its structure code in file.in yaml, the YOLOv5 model may be de
 - SPP block, PANet at the neck
 
 - Head: GIoU-loss YOLOv3 head 
-- 
+
 The creator of YOLOv5 noticed a notable change in engineering.
 In YOLOv2, Joseph Redmon proposed the anchor box structure as well as a process for picking anchor boxes of size and form that closely reflect the training set's ground truth bounding boxes.
 The authors chose the 5 best-fit anchor boxes for the COCO dataset (containing 80 classes) and used them as the default using the k-mean clustering approach with varied k values.
@@ -141,3 +141,27 @@ These settings will then be manually configured in the YOLO architecture.
 Glenn Jocher recommended that the anchor box selection mechanism be included into YOLOv5.
 As a consequence, the network does not need to evaluate any of the datasets to be used as input; instead, it will automatically "learn" and apply the optimal anchor boxes for that dataset during training.
 Solawetz (Solawetz, 2020) 
+
+## IMPLEMENTING YOLOV5 ALGORITHM
+
+### Fruit detection using YOLOv5
+
+The food we eat is receiving a lot of attention due to the fast development of technology.
+Skilled labor is one of the most expensive components in the agricultural business.
+The industry is leaning toward automation in order to reduce labor costs while improving quality.
+Robotic harvesting has the ability to bring viable answers to many of the industry's challenges.
+The forthcoming technology will have to complete a number of difficult tasks, one of which is an accurate fruit detecting system.
+Various methods, including new computer vision technologies, have been employed in the past for fruit detection.
+
+The specific study involves developing a robust model for fruit detection.
+There might be a plethora of sophisticated applications for this.
+Among them are:
+
+1. You work in a warehouse where lakhs of fruits arrive everyday, and physically separating and packaging each fruit box will take a large amount of time.
+As a result, you may create an automated system that detects fruits and separates them for packing.
+
+2. You are the proud owner of a massive orchid.
+Manual harvesting of the fruits will also need a large staff.
+You may create a robot or a self-driving vehicle that can recognize and pick fruits from specified trees. 
+Our goal is to  build a robust fruit detection system using YOLOv5. You can follow ![here](https://github.com/adrienpayong/fruit-detection-/edit/main/README.md)
+
