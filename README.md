@@ -97,3 +97,25 @@ Fully-connected layers, on the other hand, are sensitive to location and may ada
 The job of the head in a one-stage detector is to make dense predictions.
 The dense prediction is the final prediction, which is made up of a vector that contains the predicted bounding box coordinates (center, height, breadth), the prediction confidence score, and the probability classes.
 For detection, YOLOv4 uses the same head as YOLOv3 with anchor-based detection stages and three degrees of detection granularity (Solawetz, 2020) 
+
+# Overview of YOLOv5
+
+A month following the publication of YOLOv4, researcher Glenn and his colleagues launched YOLOv5, a new edition of the YOLO family (Jocher, 2020).
+Glenn Jocher is a researcher and the founder and CEO of Ultralystics LLC.
+Alexey Bochkovsky created the YOLO models using his bespoke framework Darknet, which is written mostly in C.
+Ultralystic is a firm that transforms prior versions of YOLO with one of the most well-known deep learning frameworks, PyTorch, which is written in Python. 
+Glenn Jocher is also the creator of the Mosaic data augmentation, which Alexey Bochkovsky recognized in the YOLOv4 publication (Bochkovskiy, et al., 2020).
+His YOLOv5 model, on the other hand, sparked a lot of debate in the computer vision field due to its nomenclature and advancements.
+
+Despite being launched a month after YOLOv4, the commencement of YOLOv4 and YOLOv5 research was relatively close (March – April 2020).
+Glenn opted to call his version of YOLO YOLOv5 in order to prevent a clash.
+Thus, both researchers essentially utilized the state-of-the-art advancements in the area of computer vision at the time.
+As a result, the architecture of YOLOv4 and YOLOv5 is extremely similar, and many people are disappointed with the moniker YOLOv5 (5th generation of YOLO) because it does not feature several notable advancements over the previous version YOLOv4.
+Furthermore, Glenn did not publish any papers about YOLOv5, raising further doubts regarding YOLOv5. 
+
+However, YOLOv5 had an edge in engineering.
+YOLOv5 is written in Python rather than C, as earlier versions were.
+This simplifies installation and integration on IoT devices.
+Furthermore, the PyTorch community is bigger than the Darknet community, implying that PyTorch will get more contributions and have greater development potential in the future.
+Because they are developed in two distinct languages on two separate frameworks, comparing the performance of YOLOv4 and YOLOv5 is challenging.
+However, after some time, YOLOv5 has shown superior performance over YOLOv4 under specific conditions, and has acquired some trust in the computer vision community in addition to YOLOv4. 
