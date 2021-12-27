@@ -119,3 +119,21 @@ This simplifies installation and integration on IoT devices.
 Furthermore, the PyTorch community is bigger than the Darknet community, implying that PyTorch will get more contributions and have greater development potential in the future.
 Because they are developed in two distinct languages on two separate frameworks, comparing the performance of YOLOv4 and YOLOv5 is challenging.
 However, after some time, YOLOv5 has shown superior performance over YOLOv4 under specific conditions, and has acquired some trust in the computer vision community in addition to YOLOv4. 
+## Differences – Adaptive anchor boxes
+As previously stated, the YOLOv5 design has included the most recent advances, comparable to the YOLOv4 architecture, therefore there aren't many notable changes in concept. The author did not publish a thorough paper, but instead created a repository on Github and regularly updates it with improvements.
+By deconstructing its structure code in file.in yaml, the YOLOv5 model may be described as follows (Jocher, 2020):
+
+- The backbone consists of a focus structure and a CSP network.
+
+- SPP block, PANet at the neck
+
+- Head: GIoU-loss YOLOv3 head 
+The creator of YOLOv5 noticed a notable change in engineering.
+In YOLOv2, Joseph Redmon proposed the anchor box structure as well as a process for picking anchor boxes of size and form that closely reflect the training set's ground truth bounding boxes.
+The authors chose the 5 best-fit anchor boxes for the COCO dataset (containing 80 classes) and used them as the default using the k-mean clustering approach with varied k values.
+This decreases training time while increasing network accuracy.
+However, when these 5 anchor boxes are applied to a unique dataset (including a class that is not one of the 80 classes in the COCO dataset), they are unable to swiftly adapt to the ground truth bounding boxes of this unique dataset.
+
+A giraffe dataset, for example, favours anchor boxes with the form thin and higher than a square box.
+To overcome this issue, computer vision experts often run the k-mean clustering method on the unique dataset first to get the best-fit anchor boxes for the data.
+These settings will then be manually configured in the YOLO architecture. 
