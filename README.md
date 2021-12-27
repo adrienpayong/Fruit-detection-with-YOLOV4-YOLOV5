@@ -128,6 +128,7 @@ By deconstructing its structure code in file.in yaml, the YOLOv5 model may be de
 - SPP block, PANet at the neck
 
 - Head: GIoU-loss YOLOv3 head 
+- 
 The creator of YOLOv5 noticed a notable change in engineering.
 In YOLOv2, Joseph Redmon proposed the anchor box structure as well as a process for picking anchor boxes of size and form that closely reflect the training set's ground truth bounding boxes.
 The authors chose the 5 best-fit anchor boxes for the COCO dataset (containing 80 classes) and used them as the default using the k-mean clustering approach with varied k values.
@@ -137,3 +138,6 @@ However, when these 5 anchor boxes are applied to a unique dataset (including a 
 A giraffe dataset, for example, favours anchor boxes with the form thin and higher than a square box.
 To overcome this issue, computer vision experts often run the k-mean clustering method on the unique dataset first to get the best-fit anchor boxes for the data.
 These settings will then be manually configured in the YOLO architecture. 
+Glenn Jocher recommended that the anchor box selection mechanism be included into YOLOv5.
+As a consequence, the network does not need to evaluate any of the datasets to be used as input; instead, it will automatically "learn" and apply the optimal anchor boxes for that dataset during training.
+Solawetz (Solawetz, 2020) 
