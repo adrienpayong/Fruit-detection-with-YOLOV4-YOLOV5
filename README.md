@@ -142,7 +142,7 @@ Glenn Jocher recommended that the anchor box selection mechanism be included int
 As a consequence, the network does not need to evaluate any of the datasets to be used as input; instead, it will automatically "learn" and apply the optimal anchor boxes for that dataset during training.
 Solawetz (Solawetz, 2020) 
 
-## IMPLEMENTING YOLOV5 ALGORITHM
+## Implementing YOLOV5/YOLOV4 algorithm
 
 ### Real-Time Fruit Detection using YOLOv4/YOLOv5
 
