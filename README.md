@@ -144,7 +144,7 @@ Solawetz (Solawetz, 2020)
 
 ## IMPLEMENTING YOLOV5 ALGORITHM
 
-### Fruit detection using YOLOv5
+### Real-Time Fruit Detection using YOLOv4/YOLOv5
 
 The food we eat is receiving a lot of attention due to the fast development of technology.
 Skilled labor is one of the most expensive components in the agricultural business.
@@ -164,4 +164,6 @@ As a result, you may create an automated system that detects fruits and separate
 Manual harvesting of the fruits will also need a large staff.
 You may create a robot or a self-driving vehicle that can recognize and pick fruits from specified trees. 
 Our goal is to  build a robust fruit detection system using YOLOv5. You can follow ![here](https://github.com/adrienpayong/fruit-detection-/blob/main/README.md)
+![Real-Time Fruit Detection using YOLOv4](https://github.com/adrienpayong/overview-YOLOV4-YOLOV5)
+![Real-Time Fruit Detection using YOLOv5](https://github.com/adrienpayong/fruit-detection-/blob/main/README.md)
 
