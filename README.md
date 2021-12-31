@@ -163,7 +163,9 @@ As a result, you may create an automated system that detects fruits and separate
 2. You are the proud owner of a massive orchid.
 Manual harvesting of the fruits will also need a large staff.
 You may create a robot or a self-driving vehicle that can recognize and pick fruits from specified trees. 
-Our goal is to  build a robust fruit detection system using YOLOv5. You can follow ![here](https://github.com/adrienpayong/fruit-detection-/blob/main/README.md)
+Our goal is to  build a robust fruit detection system using YOLOv5. You can follow here:
+
 ![Real-Time Fruit Detection using YOLOv4](https://github.com/adrienpayong/overview-YOLOV4-YOLOV5)
+
 ![Real-Time Fruit Detection using YOLOv5](https://github.com/adrienpayong/fruit-detection-/blob/main/README.md)
 
