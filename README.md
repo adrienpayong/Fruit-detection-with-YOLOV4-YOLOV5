@@ -167,5 +167,5 @@ Our goal is to  build a robust fruit detection system using YOLOv5. You can foll
 
 - ![Real-Time Fruit Detection using YOLOv4](https://github.com/adrienpayong/overview-YOLOV4-YOLOV5)
 
-- ![Real-Time Fruit Detection using YOLOv5](https://github.com/adrienpayong/fruit-detection-/blob/main/README.md)
+- ![Real-Time Fruit Detection using YOLOv5](https://github.com/adrienpayong/fruit-detection-)
 
