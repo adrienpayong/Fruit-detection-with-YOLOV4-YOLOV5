@@ -37,11 +37,13 @@ The output x1 is then concatenated with its own input x0, and the result of this
 
 The CSP (Cross Stage Partial) is built on the same premise as the DenseNet described above, except that instead of utilizing the full-size input feature map at the base layer, the input will be divided into two halves.
 A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed(please se, see below).
+
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Capturedense2.PNG)
 
 When these concepts were combined with the Darknet-53 design in YOLOv3, the residual blocks were replaced with dense blocks.
 CSP preserves features via propagation, stimulates the network to reuse features, decreases the number of network parameters, and aids in the preservation of fine-grained features for more efficient forwarding to deeper layers.
-Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block. 
+Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block(You cansee below). 
+![source](https://github.com/adrienpayong/object-detection/blob/main/Capturepooling12.PNG)
 ### Neck – Additional block – SPP block
 
 The output feature maps of the CSPDarknet53 backbone were delivered to an extra block (Spatial Pyramid Pooling block) to extend the receptive field and separate out the most relevant features before sending to feature aggregation architecture in the neck.
