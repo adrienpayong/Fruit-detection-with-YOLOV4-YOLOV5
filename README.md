@@ -104,7 +104,7 @@ The job of the head in a one-stage detector is to make dense predictions.
 The dense prediction is the final prediction, which is made up of a vector that contains the predicted bounding box coordinates (center, height, breadth), the prediction confidence score, and the probability classes.
 For detection, YOLOv4 uses the same head as YOLOv3 with anchor-based detection stages and three degrees of detection granularity (Solawetz, 2020) 
 
-# Overview of YOLOv5
+### Overview of YOLOv5
 
 A month following the publication of YOLOv4, researcher Glenn and his colleagues launched YOLOv5, a new edition of the YOLO family (Jocher, 2020).
 Glenn Jocher is a researcher and the founder and CEO of Ultralystics LLC.
