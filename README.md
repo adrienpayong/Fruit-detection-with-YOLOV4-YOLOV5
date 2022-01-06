@@ -173,8 +173,9 @@ Our goal is to  build a robust fruit detection system using YOLOv5. You can foll
 
 - ![Real-Time Fruit Detection using YOLOv5](https://github.com/adrienpayong/fruit-detection-)
 
-Reference
+### Reference
 [YOLOv4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/pdf/2004.10934.pdf)
+
 [EVOLUTION OF YOLO ALGORITHM AND YOLOV5: THE STATE-OF-THE-ART
 OBJECT DETECTION ALGORITHM](https://www.theseus.fi/bitstream/handle/10024/452552/Do_Thuan.pdf?sequence=2&isAllowed=y)
 
