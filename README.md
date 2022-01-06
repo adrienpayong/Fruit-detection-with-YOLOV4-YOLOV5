@@ -1,4 +1,4 @@
-# Overview of YOLOv4
+# An Overview of YOLOv4 and YOLOv5
 The original YOLO algorithm was created by Joseph Redmon, who is also the creator of the Darknet custom framework.
 After 5 years of study and development to the third generation of YOLO (YOLOv3), Joseph Redmon announced his retirement from the area of computer vision and the discontinuation of developing the YOLO algorithm due to concerns that his research will be misused in military applications.
 He does not, however, challenge the continuance of study by any person or group based on the YOLO algorithm's early principles.
@@ -16,7 +16,7 @@ The distinction here is that Head is in charge of detection, including localizat
 As shown below, the two-stage detector does these two jobs independently and then aggregates their findings (Sparse Detection), while the one-stage detector performs both tasks simultaneously (Dense Detection).
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Capture1.PNG)
 
-# Backbone CSPDarknet53 
+### Backbone CSPDarknet53 
 
 The authors investigated three alternatives for the YOLOv4 model's backbone (feature extractor): CSPResNext53, CSPDarknet53, and EfficientNet-B3, the most sophisticated convolutional network at the time.
 CSP Darknet53 neural network was judged to be the best optimum model based on theoretical rationale and several testing as show below.
