@@ -32,11 +32,12 @@ To be more specific, each stage of DenseNet is made up of a dense block and a tr
 After passing through the dense block, the input will be routed to the transition layer, which will change the size (downsample or upsample) using convolution and pooling.
 The 𝑖𝑡ℎ dense layer's output will be concatenated with its own input to generate the input for the following (𝑖 + 1)𝑡ℎ layer.
 For example, in the first dense layer, the input xo has created the output x1 after progressing through convolutional layers.
-The output x1 is then concatenated with its own input x0, and the result of this concatenation becomes the input of the second dense layer. 
+The output x1 is then concatenated with its own input x0, and the result of this concatenation becomes the input of the second dense layer(see below).
+![source](https://github.com/adrienpayong/object-detection/blob/main/Captureback1.PNG)
 
 The CSP (Cross Stage Partial) is built on the same premise as the DenseNet described above, except that instead of utilizing the full-size input feature map at the base layer, the input will be divided into two halves.
-A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed.
-As a consequence, various dense layers will learn duplicated gradient information again.
+A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed(please se, see below).
+![source](https://github.com/adrienpayong/object-detection/blob/main/Capturedense2.PNG)
 
 When these concepts were combined with the Darknet-53 design in YOLOv3, the residual blocks were replaced with dense blocks.
 CSP preserves features via propagation, stimulates the network to reuse features, decreases the number of network parameters, and aids in the preservation of fine-grained features for more efficient forwarding to deeper layers.
