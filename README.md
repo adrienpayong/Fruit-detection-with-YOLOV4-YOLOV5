@@ -4,7 +4,7 @@ After 5 years of study and development to the third generation of YOLO (YOLOv3),
 He does not, however, challenge the continuance of study by any person or group based on the YOLO algorithm's early principles.
 
 Alexey Bochkovsky, a Russian researcher and engineer who constructed the Darknet framework and three earlier YOLO architectures in C based on Joseph Redmon's theoretical concepts, collaborated with Chien Yao and Hon-Yuan to publish YOLOv4 in April 2020.
-(2020, Bochkovskiy) 
+
 ## Object detection architecture
 Along with the development of YOLO, several object identification algorithms using various methodologies have achieved outstanding results.
 Since then, two architectural object detection ideas have emerged: one-stage detector and two-stage detector.
@@ -144,7 +144,7 @@ To overcome this issue, computer vision experts often run the k-mean clustering 
 These settings will then be manually configured in the YOLO architecture. 
 Glenn Jocher recommended that the anchor box selection mechanism be included into YOLOv5.
 As a consequence, the network does not need to evaluate any of the datasets to be used as input; instead, it will automatically "learn" and apply the optimal anchor boxes for that dataset during training.
-Solawetz (Solawetz, 2020) 
+
 
 ## Implementing YOLOV5/YOLOV4 algorithm
 
