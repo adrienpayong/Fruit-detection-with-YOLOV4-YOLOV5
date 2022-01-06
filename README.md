@@ -26,7 +26,7 @@ CSP Darknet53 neural network was judged to be the best optimum model based on th
 
 The CSPResNext50 and CSPDarknet53 (CSP stands for Cross Stage Partial) architectures are developed from the DenseNet design, which takes the prior input and concatenates it with the current input before proceeding into the dense layer.
 DenseNet was created to link layers in an extremely deep neural network in order to solve vanishing gradient challenges (as ResNet)
-[source](https://github.com/adrienpayong/object-detection/blob/main/Capturedense.PNG)
+![source](https://github.com/adrienpayong/object-detection/blob/main/Capturedense.PNG)
 
 To be more specific, each stage of DenseNet is made up of a dense block and a transition layer as shown above, and each dense block is made up of k dense layers.
 After passing through the dense block, the input will be routed to the transition layer, which will change the size (downsample or upsample) using convolution and pooling.
