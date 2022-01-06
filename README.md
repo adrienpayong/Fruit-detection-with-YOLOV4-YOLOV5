@@ -32,6 +32,7 @@ After passing through the dense block, the input will be routed to the transitio
 The 𝑖𝑡ℎ dense layer's output will be concatenated with its own input to generate the input for the following (𝑖 + 1)𝑡ℎ layer.
 For example, in the first dense layer, the input xo has created the output x1 after progressing through convolutional layers.
 The output x1 is then concatenated with its own input x0, and the result of this concatenation becomes the input of the second dense layer(see below).
+
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Captureback1.PNG)
 
 The CSP (Cross Stage Partial) is built on the same premise as the DenseNet described above, except that instead of utilizing the full-size input feature map at the base layer, the input will be divided into two halves.
