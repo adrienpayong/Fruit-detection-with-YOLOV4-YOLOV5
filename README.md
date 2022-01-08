@@ -127,13 +127,13 @@ Because they are developed in two distinct languages on two separate frameworks,
 However, after some time, YOLOv5 has shown superior performance over YOLOv4 under specific conditions, and has acquired some trust in the computer vision community in addition to YOLOv4. 
 ## Differences – Adaptive anchor boxes
 As previously stated, the YOLOv5 design has included the most recent advances, comparable to the YOLOv4 architecture, therefore there aren't many notable changes in concept. The author did not publish a thorough paper, but instead created a repository on Github and regularly updates it with improvements.
-By deconstructing its structure code in file.in yaml, the YOLOv5 model may be described as follows (Jocher, 2020):
+By deconstructing its structure code in file.in yaml, the YOLOv5 model may be described as follows:
 
 - The backbone consists of a focus structure and a CSP network.
 
-- SPP block, PANet at the neck
+- Neck: SPP block, PANet
 
-- Head: GIoU-loss YOLOv3 head 
+- Head: Head: YOLOv3 head using GIoU-loss
 
 The creator of YOLOv5 noticed a notable change in engineering.
 In YOLOv2, Joseph Redmon proposed the anchor box structure as well as a process for picking anchor boxes of size and form that closely reflect the training set's ground truth bounding boxes.
