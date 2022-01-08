@@ -36,13 +36,13 @@ The output x1 is then concatenated with its own input x0, and the result of this
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Captureback1.PNG)
 
 The CSP (Cross Stage Partial) is built on the same premise as the DenseNet described above, except that instead of utilizing the full-size input feature map at the base layer, the input will be divided into two halves.
-A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed(please se, see below).
+A chunk will be sent via the dense block as normal, while another will be routed directly to the next step without being processed(please, see below).
 
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Capturedense2.PNG)
 
 When these concepts were combined with the Darknet-53 design in YOLOv3, the residual blocks were replaced with dense blocks.
 CSP preserves features via propagation, stimulates the network to reuse features, decreases the number of network parameters, and aids in the preservation of fine-grained features for more efficient forwarding to deeper layers.
-Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block(You cansee below). 
+Given that increasing the number of densely linked convolutional layers may result in a drop in detection speed, only the final convolutional block in the Darknet-53 backbone network that can extract richer semantic features is enhanced to be a dense block(You can see below). 
 
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Capturepooling12.PNG)
 
@@ -80,7 +80,7 @@ However, the backbone of today's deep neural networks comprises a large number o
 As a result, in FPN, fine-grained features must traverse a lengthy trip from low-level to high-level layers.
 The PAN architecture's developers offered a bottom-up augmentation approach in addition to the top-down one utilized in FPN.
 As a result, a "shortcut" was built to link fine-grained characteristics from lower-level layers to higher-level layers.
-This "shortcut" has less than ten layers, allowing for easier information flow (Liu et al., 2018). 
+This "shortcut" has less than ten layers, allowing for easier information flow. 
 ## Adaptive Feature Pooling Structure 
 Previously utilized algorithms, such as the Mask-RCNN, employed information from a single stage to forecast masks.
 If the area of interest was wide, it employed ROI Align Pooling to pull features from higher levels.
