@@ -97,6 +97,7 @@ Following this, an element-wise max fusion operation is performed to allow the n
 Fully Convolutional Network (FCN) is utilized instead of fully connected layers in Mask-RCNN because it retains spatial information while reducing the number of parameters in the network.
 However, since the parameters are shared across all spatial places, the model does not learn how to utilize pixel locations for prediction; it will, by default, depict sky at the top of the image and roads at the bottom.
 Fully-connected layers, on the other hand, are sensitive to location and may adapt to various spatial locations. PANet makes advantage of information from both layers to produce a more accurate mask prediction. 
+
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Capture8.PNG)
 
 ### Head – YOLOv3
