@@ -19,7 +19,7 @@ As shown below, the two-stage detector does these two jobs independently and the
 ### Backbone CSPDarknet53 
 
 The authors investigated three alternatives for the YOLOv4 model's backbone (feature extractor): CSPResNext53, CSPDarknet53, and EfficientNet-B3, the most sophisticated convolutional network at the time.
-CSP Darknet53 neural network was judged to be the best optimum model based on theoretical rationale and several testing as show below.
+CSP Darknet53 neural network was judged to be the best optimum model based on theoretical rationale and several testing as shown below.
 ![source](https://github.com/adrienpayong/object-detection/blob/main/Captureback.PNG)
 
 
